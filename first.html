@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .container1-fluid {
+        width: 1440px;
+        height: 642px;
+        background: #ffffff;
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+      }
+      .text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px 24px;
+
+        position: absolute;
+        width: 1280px;
+        height: 402px;
+        left: 80px;
+        top: 136px;
+      }
+      p {
+        width: 600px;
+        height: 84px;
+        font-family: "SF Pro Text";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 28px;
+        color: #6b7280;
+        flex: none;
+        order: 1;
+        align-self: stretch;
+        flex-grow: 0;
+      }
+      h6 {
+        width: 512px;
+        height: 24px;
+
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: #111827;
+        flex: none;
+        order: 0;
+        align-self: stretch;
+        flex-grow: 0;
+      }
+      h1 {
+        width: 600px;
+        height: 120px;
+        font-family: "SF Pro Display";
+        font-style: normal;
+        font-weight: 800;
+        font-size: 60px;
+        line-height: 60px;
+        letter-spacing: -0.0225em;
+        color: #111827;
+        flex: none;
+        order: 0;
+        align-self: stretch;
+        flex-grow: 0;
+      }
+      #id {
+        box-sizing: border-box;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 13px;
+
+        width: 353px;
+        height: 50px;
+
+        background: #ffffff;
+
+        border: 1px solid #d1d5db;
+
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+        border-radius: 6px;
+
+        flex: none;
+        order: 0;
+        align-self: stretch;
+        flex-grow: 0;
+      }
+      .free-trial-button {
+        width: 147px;
+        height: 50px;
+
+        /* Inside auto layout */
+
+        flex: none;
+        order: 1;
+        align-self: stretch;
+        flex-grow: 0;
+      }
+      .media-float {
+        position: absolute;
+        width: 600px;
+        height: 402px;
+        left: 632px;
+        top: 0px;
+      }
+      .image {
+        /* position: absolute; */
+        width: 448px;
+        height: 299px;
+        left: 76px;
+        top: 52px;
+
+        /* white */
+
+        background: #ffffff;
+        /* /shadow/lg */
+
+        box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1),
+          0px 4px 6px -2px rgba(0, 0, 0, 0.05);
+        border-radius: 3px;
+      }
+      .plate {
+        position: absolute;
+        width: 640px;
+        height: 546px;
+        right: -140px;
+        top: calc(50% - 546px / 2);
+
+        background: #f3f4f6;
+      }
+      .section2 {
+        /* width: 1440px; */
+        height: 1050px;
+
+        /* gray/900 */
+
+        background: #111827;
+
+        /* Inside auto layout */
+
+        flex: none;
+        order: 2;
+        align-self: stretch;
+        flex-grow: 0;
+      }
+      .section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        gap: 40px;
+
+        /* width: 1216px; */
+        height: 666px;
+
+        /* Inside auto layout */
+
+        flex: none;
+        order: 0;
+        flex-grow: 1;
+      }
+      header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        gap: 16px;
+
+        /* width: 678px;
+        height: 88px; */
+
+        /* Inside auto layout */
+
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+      }
+      #sec2h6 {
+        /* width: 103px;
+        height: 18px; */
+        font-family: "SF Pro Text";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 18px;
+        /* identical to box height, or 100% */
+        text-align: center;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        /* MultiColor Gradient */
+        background: linear-gradient(
+          135deg,
+          #b16cea 33.85%,
+          #ff5e69 55.21%,
+          #ff8a56 78.12%,
+          #ffa84b 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        /* text-fill-color: transparent; */
+        /* Inside auto layout */
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+      }
+      h3 {
+        /* width: 678px; */
+        /* height: 54px; */
+
+        font-family: "SF Pro Display";
+        font-style: normal;
+        font-weight: 800;
+        font-size: 54px;
+        line-height: 54px;
+
+        text-align: center;
+        letter-spacing: -0.0225em;
+
+        color: #ffffff;
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+      }
+      .columns {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 24px;
+
+        /* width: 1216px; */
+        height: 538px;
+
+        /* Inside auto layout */
+
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+      }
+      .column1 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 24px;
+
+        width: 288px;
+        height: 538px;
+
+        /* Inside auto layout */
+
+        flex: none;
+        order: 0;
+        align-self: stretch;
+        flex-grow: 0;
+      }
+      .item1 {
+        box-sizing: border-box;
+
+        /* Auto layout */
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 32px;
+        gap: 24px;
+
+        width: 288px;
+        height: 274px;
+
+        /* white */
+
+        background: #ffffff;
+        /* gray/300 */
+
+        border: 1px solid #d1d5db;
+        /* Custom Shadow */
+
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+        border-radius: 12px;
+
+        /* Inside auto layout */
+
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+      }
+      .item2 {
+        box-sizing: border-box;
+
+        /* Auto layout */
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding: 32px;
+        gap: 24px;
+
+        width: 288px;
+        height: 240px;
+
+        /* basic/white */
+
+        background: #ffffff;
+        /* gray/300 */
+
+        border: 1px solid #d1d5db;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+        border-radius: 12px;
+
+        /* Inside auto layout */
+
+        flex: none;
+        order: 1;
+        flex-grow: 1;
+      }
+      .item3 {
+        box-sizing: border-box;
+
+        /* Auto layout */
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding: 32px;
+        gap: 24px;
+
+        width: 288px;
+        height: 214px;
+
+        /* white */
+
+        background: #ffffff;
+        /* gray/300 */
+
+        border: 1px solid #d1d5db;
+        /* Custom Shadow */
+
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+        border-radius: 12px;
+
+        /* Inside auto layout */
+
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+      }
+      .item4 {
+        box-sizing: border-box;
+
+        /* Auto layout */
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 32px;
+        gap: 24px;
+
+        width: 288px;
+        height: 300px;
+
+        /* white */
+
+        background: #ffffff;
+        /* gray/300 */
+
+        border: 1px solid #d1d5db;
+        border-radius: 12px;
+
+        /* Inside auto layout */
+
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+      }
+      .item5 {
+        box-sizing: border-box;
+
+        /* Auto layout */
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-end;
+        padding: 32px;
+        gap: 32px;
+
+        width: 592px;
+        height: 254px;
+
+        /* white */
+
+        background: #ffffff;
+        /* gray/300 */
+
+        border: 1px solid #d1d5db;
+        /* Custom Shadow */
+
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+        border-radius: 12px;
+
+        /* Inside auto layout */
+
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+      }
+      .row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0px;
+
+        width: 592px;
+        height: 260px;
+
+        /* Inside auto layout */
+
+        flex: none;
+        order: 1;
+        align-self: stretch;
+        flex-grow: 1;
+      }
+      .item6 {
+        box-sizing: border-box;
+
+        /* Auto layout */
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding: 32px;
+        gap: 24px;
+
+        width: 288px;
+        height: 260px;
+
+        /* basic/white */
+
+        background: #ffffff;
+        /* gray/300 */
+
+        border: 1px solid #d1d5db;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+        border-radius: 12px;
+
+        /* Inside auto layout */
+
+        flex: none;
+        order: 0;
+        align-self: stretch;
+        flex-grow: 0;
+      }
+      .frame {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+
+        width: 304px;
+        height: 174px;
+
+        /* Inside auto layout */
+
+        flex: none;
+        order: 1;
+        flex-grow: 1;
+      }
+      .write {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        gap: 12px;
+
+        width: 224px;
+        height: 174px;
+
+        /* Inside auto layout */
+
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        color: aliceblue;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link">Disabled</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <button class="btn btn-outline-success" type="submit">
+              Start free trial
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- 1st container -->
+    <div class="container1-fluid f1">
+      <div class="plate img-fluid"></div>
+      <div class="media-fluid rounded float-end">
+        <img
+          class="image"
+          src="https://via.placeholder.com/400x400.png?text=Placeholder+Image"
+          alt="Placeholder Image"
+        />
+      </div>
+      <div class="text">
+        <div class="leading_content">
+          <h1>Data to enrich your</h1>
+          <p class="content">
+            Lorem ipsum dolor. Donec semper mi eu risus ullamcorper, a malesuada
+            ipsum convallis. Quisque vitae tellus mauris. In nec orci vitae
+            sapien sollicitudin faucibus vel a odio. Vestibulum malesuada
+            lobortis sapien, eget gravida metus interdum non.
+          </p>
+
+          <div class="form-container">
+            <h6>Sign up to get notified when it’s ready.</h6>
+            <input
+              type="text"
+              id="email"
+              placeholder="Enter your email address"
+            />
+            <button class="free-trial-button">Start Your Free Trial</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 2nd container -->
+
+    <div class="section2 text-center">
+      <div class="section justify-content-start">
+        <header>
+          <h6 id="sec2h6">Features</h6>
+          <h3>A better way to send money</h3>
+        </header>
+        <div class="columns">
+          <div class="column1">
+            <div class="item1 col-sm-12 col-md-6"></div>
+            <div class="item2 col-sm-12 col-md-6"></div>
+          </div>
+          <div class="column2">
+            <div class="item3 col-sm-12 col-md-6"></div>
+            <div class="item4 col-sm-12 col-md-6"></div>
+          </div>
+          <div class="column3">
+            <div class="item5 col-sm-12 col-md-6"></div>
+            <div class="row">
+              <div class="item6 col-sm-12 col-md-6"></div>
+              <div class="frame">
+                <div class="write">dfvadfvgadfvdf</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
